@@ -11,27 +11,27 @@ import java.security.NoSuchAlgorithmException;
 @RestController
 public class HashController {
 
-    @RequestMapping("/hash/{input}")
-    public String getDigest(@PathVariable("input") String input) throws NoSuchAlgorithmException {
-        for(int i = 0; i < 100_000; i++) {
-            input = getMD5Digest(input);
-        }
-        return input;
-    }
+//    @RequestMapping("/hash/{input}")
+//    public String getDigest(@PathVariable("input") String input) throws NoSuchAlgorithmException {
+//        for(int i = 0; i < 100_000; i++) {
+//            input = getMD5Digest(input);
+//        }
+//        return input;
+//    }
 
 
     @RequestMapping("/hello")
     public String hello() {
-        return "hello333";
+        return "hello~~?";
     }
 
-    private String getMD5Digest(String input) throws NoSuchAlgorithmException {
-        MessageDigest md = MessageDigest.getInstance("MD5");
-        md.update(input.getBytes());
-        byte[] digest = md.digest();
-        String myHash = DatatypeConverter
-                .printHexBinary(digest).toUpperCase();
-
-        return myHash;
-    }
+//    private String getMD5Digest(String input) throws NoSuchAlgorithmException {
+//        MessageDigest md = MessageDigest.getInstance("MD5");
+//        md.update(input.getBytes());
+//        byte[] digest = md.digest();
+//        String myHash = DatatypeConverter
+//                .printHexBinary(digest).toUpperCase();
+//
+//        return myHash;
+//    }
 }
