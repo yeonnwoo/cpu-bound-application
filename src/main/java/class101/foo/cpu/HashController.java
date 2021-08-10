@@ -19,7 +19,7 @@ public class HashController {
 
     @RequestMapping("/hello")
     public String hello() {
-        return "제발 ㅡㅡ!!!";
+        return "헬로우!";
     }
 
 //    private String getMD5Digest(String input) throws NoSuchAlgorithmException {
